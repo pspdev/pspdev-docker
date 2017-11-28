@@ -2,7 +2,7 @@ FROM ubuntu:17.10
 MAINTAINER Naomi Peori <naomi@peori.ca>
 
 ENV PSPDEV /usr/local/pspdev
-ENV PATH $PATH:$PSPDEV/bin
+ENV PATH ${PATH}:${PSPDEV}/bin
 
 RUN \
   apt-get -y update && \
@@ -16,3 +16,5 @@ RUN \
     ./toolchain.sh && \
   cd .. && \
   rm -Rf psptoolchain
+
+WORKDIR /build
