@@ -13,11 +13,19 @@
 
    docker build -t pspdev-docker .
 
+ Copy the helper script:
+
+   cp pspdev-docker.sh /usr/local/bin
+
  ==================
   How do I use it?
  ==================
 
- Run 'make' on the current directory:
+ Use the helper script to run 'make' on the current directory:
+
+   pspdev-docker.sh make
+
+ Or, manually run 'make' on the current directory:
 
    docker run -v `pwd`:/build pspdev-docker /bin/bash -c "cd /build && make"
 
