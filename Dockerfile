@@ -1,4 +1,4 @@
-FROM ubuntu:17.10
+FROM ubuntu:18.04
 MAINTAINER Naomi Peori <naomi@peori.ca>
 
 ENV PSPDEV /usr/local/pspdev
