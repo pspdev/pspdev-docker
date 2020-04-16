@@ -3,7 +3,7 @@
 IMAGE="pspdev-docker"
 
 if [ ! -z "$*" ]; then
-  sudo docker run -v `pwd`:/build --rm ${IMAGE} $*
+  sudo docker run -v "`pwd`:/build" --rm ${IMAGE} $*
 else
-  sudo docker run -v `pwd`:/build --rm -it ${IMAGE} bash
+  sudo docker run -v "`pwd`:/build" --rm -it ${IMAGE} bash
 fi
