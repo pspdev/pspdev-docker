@@ -16,7 +16,7 @@ RUN \
 SHELL ["/bin/bash", "-c"]
 
 RUN \
-  git clone https://github.com/dbeef/psptoolchain.git && \
+  git clone https://github.com/pspdev/psptoolchain.git && \
   pushd psptoolchain && \
     ./toolchain.sh && \
     popd && \
