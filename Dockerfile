@@ -9,7 +9,7 @@ ENV PATH ${PATH}:${PSPDEV}/bin
 
 RUN \
   apt-get -y update && \
-  apt-get -y install autoconf automake bison cmake doxygen flex g++ gcc git libelf-dev libgmp-dev libmpfr-dev libncurses5-dev libreadline-dev libtool-bin libusb-dev make mpc patch subversion tcl texinfo unzip wget && \
+  apt-get -y install autoconf automake bison cmake doxygen flex g++ gcc git graphviz libelf-dev libgmp-dev libmpfr-dev libncurses5-dev libreadline-dev libtool-bin libusb-dev make mpc patch subversion tcl texinfo unzip wget && \
   apt-get -y clean autoclean autoremove && \
   rm -rf /var/lib/{apt,dpkg,cache,log}/
 
