@@ -6,5 +6,8 @@ if [ "$EUID" -ne 0 ] && [ -z "$(id|grep docker)" ];then
 	sudo $0 "$@"
 	exit $?
 fi
-
-docker run -v "`pwd`:/build" --rm ${IMAGE} $*
+if [ ! -z "$*" ]; then
+  docker run -v "`pwd`:/build" --rm ${IMAGE} $*
+else
+  docker run -v "`pwd`:/build" --rm -it ${IMAGE} bash
+fi
