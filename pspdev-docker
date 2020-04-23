@@ -4,6 +4,7 @@ IMAGE="pspdev-docker"
 
 if [ "$EUID" -ne 0 ] && [ -z "$(id|grep docker)" ];then
 	sudo $0 "$@"
+	exit $?
 fi
 
 docker run -v "`pwd`:/build" --rm ${IMAGE} $*
