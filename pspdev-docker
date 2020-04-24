@@ -2,7 +2,7 @@
 
 IMAGE="pspdev-docker"
 
-if [ "$EUID" -ne 0 ] && [ -z "$(id|grep docker)" ];then
+if [ "$(uname)" == "Linux" ] && [ -z "$(id|grep docker)" ] && [ "$EUID" -ne 0 ];then
 	sudo $0 "$@"
 	exit $?
 fi
