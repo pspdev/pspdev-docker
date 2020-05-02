@@ -2,10 +2,13 @@
 
 IMAGE="pspdev-docker"
 
+# Rerun script with sudo if the current user is not allowed to run docker
 if [ "$(uname)" == "Linux" ] && [ -z "$(id|grep docker)" ] && [ "$EUID" -ne 0 ];then
 	sudo "$0" "$@"
 	exit $?
 fi
+
+# Give a shell or run a command depending on input
 if [ ! -z "$*" ]; then
   docker run -v "`pwd`:/build" --rm ${IMAGE} $*
 else
