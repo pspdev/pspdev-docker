@@ -43,9 +43,7 @@ In Command Line, `docker build -t pspdev-docker .`
 
 ## How do I use it?
 
-Run this command in Command Line to build your homebrew
-`docker run -v %cd%:/build --rm pspdev-docker make`
-in the same folder your Makefile and source code is present.
+Run `docker run -v %cd%:/build --rm pspdev-docker make` in Command Line to build your homebrew in the same folder your Makefile and source code is present.
 
 ## How do I save and load it?
 
@@ -54,3 +52,7 @@ in the same folder your Makefile and source code is present.
 
 #### Load the image:
 `docker load < bzip2 -dc pspdev-docker.tar.bz2`
+
+## Basic troobleshooting
+
+Try to run your command line as admin.
