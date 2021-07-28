@@ -5,6 +5,7 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '0 8 * * FRI'
+
 jobs:
   push_to_registry:
     name: Push Docker image to GitHub Container Registry
@@ -17,7 +18,5 @@ jobs:
         with:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-          registry: docker.pkg.github.com
-          repository: ${{ github.repository }}/pspdev-docker
+          registry: ghcr.io
           tags: latest
-
