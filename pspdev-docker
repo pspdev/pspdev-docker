@@ -1,6 +1,6 @@
 #!/bin/bash
 
-IMAGE="pspdev-docker"
+IMAGE="ghcr.io/pspdev/pspdev-docker:latest"
 
 # Rerun script with sudo if the current user is not allowed to run docker
 if [ "$(uname)" == "Linux" ] && [ -z "$(id|grep docker)" ] && [ "$EUID" -ne 0 ];then
