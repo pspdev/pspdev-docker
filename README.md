@@ -1,5 +1,7 @@
 # pspdev-docker
 
+[![Publish Docker image](https://github.com/pspdev/pspdev-docker/actions/workflows/main.yml/badge.svg)](https://github.com/pspdev/pspdev-docker/actions/workflows/main.yml)
+
 ## What does this do?
 This program will automatically build a docker image with the pspdev toolchain ready to be used for homebrew development.
 
