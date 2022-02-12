@@ -15,9 +15,12 @@ RUN \
 
 SHELL ["/bin/bash", "-c"]
 
+# FIX: could not open file: /etc/mtab: No such file or directory on /scripts/003-psp-packages.sh
+RUN ln -sf /proc/mounts /etc/mtab
+
 RUN \
-  git clone https://github.com/pspdev/psptoolchain.git && \
-  pushd psptoolchain && \
-    ./toolchain.sh && \
+  git clone https://github.com/pspdev/pspdev.git && \
+  pushd pspdev && \
+    ./build-all.sh && \
     popd && \
-  rm -Rf psptoolchain
+  rm -Rf pspdev
